@@ -4,12 +4,12 @@
   "description": "Project for Quinn",
   "main": "index.js",
   "prisma": {
-  "seed": "node --require esbuild-register prisma/seed.ts"
+    "seed": "node --require esbuild-register prisma/seed.ts"
   },
   "scripts": {
     "test": "ts-mocha ./src/index.spec.ts",
     "start": "ts-node src/index.ts",
-    "build": "tsc",
+    "build": "prisma generate && tsc",
     "serve": "node dist/index.js",
     "dev": "nodemon src/index.ts"
   },
